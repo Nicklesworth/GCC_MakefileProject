@@ -2,17 +2,6 @@
 # File:        Makefile
 # Description: Genreic GCC based Makefile for compiling C/C++ programs
 # -----------------------------------------------------------------------------
-# COPYRIGHT NOTICE
-# Copyright (C) 2021 inMusic Brands. All Rights Reserved.
-# The information contained herein is confidential property of inMusic Brands.
-# The use, copying, transfer or disclosure of such information is prohibited
-# except by express written agreement with inMusic Brands.
-#
-# SVN LOG (Auto-Generated, Do Not Edit)
-# |-------- $LastChangedBy: $:
-# |------ $LastChangedDate: $:
-# |-- $LastChangedRevision: $:
-# -----------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
 # Pull in the project makefile which expects the following to be set:
