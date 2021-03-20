@@ -51,16 +51,16 @@ CXX_SOURCES := $(strip $(abspath $(CXX_SOURCES)))
 # ------------------------------------------------------------------------------
 ifeq ($(OS),Windows_NT)
 	TARGET = win
-    CPPFLAGS += -D WINDOWS
+    CPPFLAGS += -DWINDOWS
 else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
 		TARGET = linux
-        CPPFLAGS += -D LINUX
+        CPPFLAGS += -DLINUX
     endif
     ifeq ($(UNAME_S),Darwin)
 		TARGET = macos
-        CPPFLAGS += -D OSX
+        CPPFLAGS += -DOSX
     endif
 endif
 
@@ -78,7 +78,7 @@ all: $(BUILD_DIR)/$(TARGET)/$(EXECUTABLE)
 
 $(BUILD_DIR)/$(TARGET)/$(EXECUTABLE): $(CC_OBJS) $(CXX_OBJS)
 	@echo Linking "  ($(CXX))": $@
-	@$(CXX) $(LDFLAGS) -static $^ -o $@
+	@$(CXX) $(LDFLAGS) $^ -o $@
 
 $(CC_OBJS): $(OBJS_DIR)/%.o : $(CC_SOURCES)
 	@echo Compiling "($(CC))": $< --\> $@
@@ -90,6 +90,7 @@ $(CXX_OBJS): $(OBJS_DIR)/%.o : $(CXX_SOURCES)
 	@mkdir -p $(@D)
 	@$(CXX) -MMD -MP $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
 
+# Auto-generated dependency files included as rules
 -include $(CC_OBJS:.o=.d)
 -include $(CXX_OBJS:.o=.d)
 

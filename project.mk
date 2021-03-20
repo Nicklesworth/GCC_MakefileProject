@@ -13,4 +13,4 @@ LIBS        :=
 CFLAGS      :=
 CXXFLAGS    :=
 CPPFLAGS    := -g -Wall -O0
-LDFLAGS     :=
+LDFLAGS     := -static
