@@ -2,17 +2,6 @@
 # File:        project.mk
 # Description: Configuration makefile that sets up the generic Makefile
 # -----------------------------------------------------------------------------
-# COPYRIGHT NOTICE
-# Copyright (C) 2021 inMusic Brands. All Rights Reserved.
-# The information contained herein is confidential property of inMusic Brands.
-# The use, copying, transfer or disclosure of such information is prohibited
-# except by express written agreement with inMusic Brands.
-#
-# SVN LOG (Auto-Generated, Do Not Edit)
-# |-------- $LastChangedBy: $:
-# |------ $LastChangedDate: $:
-# |-- $LastChangedRevision: $:
-# -----------------------------------------------------------------------------
 EXECUTABLE  := helloWorld
 BUILD_DIR   := ./bin
 SRC_DIRS    := ./src
