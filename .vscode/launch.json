@@ -6,7 +6,7 @@
     "configurations": [
         
         {
-            "name": "(gdb) Launch",
+            "name": "Debug with GDB",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/win/helloWorld.exe",
