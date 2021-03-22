@@ -1,7 +1,11 @@
 {
     "configurations": [
         {
-            "name": "Debug"
+            "name": "Debug",
+            "includePath": [
+                "./src",
+                "./inc"
+            ]
         }
     ],
     "version": 4
