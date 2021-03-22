@@ -5,17 +5,17 @@
     "version": "0.2.0",
     "configurations": [        
         {
-            "name": "Debug - Win (gdb)",
+            "name": "Debug - gdb",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/win/helloWorld.exe",
+            "program": "${workspaceFolder}/bin/${command:cpptools.activeConfigName}/helloWorld",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\Dev\\toolchains\\msys64\\mingw64\\bin\\gdb.exe",
+            "miDebuggerPath": "gdb",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -25,10 +25,10 @@
             ]
         },
         {
-            "name": "Debug - MacOS (lldb)",
+            "name": "Debug - lldb",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/macos/helloWorld",
+            "program": "${workspaceFolder}/bin/${command:cpptools.activeConfigName}/helloWorld",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",

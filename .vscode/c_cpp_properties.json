@@ -1,12 +1,8 @@
 {
     "configurations": [
-        {
-            "name": "Debug",
-            "includePath": [
-                "./src",
-                "./inc"
-            ]
-        }
+        { "name": "linux" },
+        { "name": "macos" },
+        { "name": "win"   }
     ],
     "version": 4
 }
