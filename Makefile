@@ -60,7 +60,10 @@ else
     endif
     ifeq ($(UNAME_S),Darwin)
 		TARGET = macos
-        CPPFLAGS += -DOSX
+        CPPFLAGS += -DMACOS
+		
+		# MacOS does not really support static linking
+		LDFLAGS := $(filter-out -static,$(LDFLAGS))
     endif
 endif
 
