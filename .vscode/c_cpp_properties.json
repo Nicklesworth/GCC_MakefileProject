@@ -1,8 +1,27 @@
 {
+    "env": {
+        "program": "helloWorld",
+        "build_dir": "bin"
+    },
     "configurations": [
-        { "name": "linux" },
-        { "name": "macos" },
-        { "name": "win"   }
+        {
+            "name": "win",
+            "customConfigurationVariables": {
+                "program": "${env:build_dir}/win/${env:program}.exe"
+            }
+        },
+        {
+            "name": "linux",
+            "customConfigurationVariables": {
+                "program": "${env:build_dir}/linux/${env:program}"
+            }
+        },
+        {
+            "name": "macos",
+            "customConfigurationVariables": {
+                "program": "${env:build_dir}/macos/${env:program}"
+            }
+        }
     ],
     "version": 4
 }

@@ -1,40 +1,39 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [        
+    // Pull in custom variables from c_cpp_properties.json
+    "inputs" : [
         {
-            "name": "Debug - gdb",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/bin/${command:cpptools.activeConfigName}/helloWorld",
-            "args": [],
-            "stopAtEntry": true,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "gdb",
+            "id"     : "program",
+            "type"   : "command",
+            "command": "cpptools.activeConfigCustomVariable",
+            "args"   : "program"
+        }
+    ],
+    "configurations": [
+        {
+            "name"         : "Debug - gdb",
+            "type"         : "cppdbg",
+            "request"      : "launch",
+            "program"      : "${workspaceFolder}/${input:program}",
+            "stopAtEntry"  : true,
+            "cwd"          : "${workspaceFolder}",
+            "MIMode"       : "gdb",
             "setupCommands": [
                 {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
+                    "description"   : "Enable pretty-printing for gdb",
+                    "text"          : "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
             ]
         },
         {
-            "name": "Debug - lldb",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/bin/${command:cpptools.activeConfigName}/helloWorld",
-            "args": [],
+            "name"       : "Debug - lldb",
+            "type"       : "cppdbg",
+            "request"    : "launch",
+            "program"    : "${workspaceFolder}/${input:program}",
             "stopAtEntry": true,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb"
-        },
+            "cwd"        : "${workspaceFolder}",
+            "MIMode"     : "lldb"
+        }
     ]
 }
