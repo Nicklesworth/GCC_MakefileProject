@@ -1,5 +1,5 @@
-# Template_MakeProject
-Template Makefile project for C/C++ on GCC hosts
+# Template_GCC-Make
+Template Makefile project for C/C++ with GCC
 Features
 - Two file structure, Makefile is generic, project.mk is project specific
 - Automated dependency creation
